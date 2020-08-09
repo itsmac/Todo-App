@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Testpage</title>
+    </head>
+    {% for test_data in tests %}
+    <p>
+        Food :  {{test_data.name}} <br>
+        Description : {{test_data.desc}} <br>
+        price : {{test_data.price}} <br>
+        {% if test_data.offer %}
+        <div>
+        Special offer available <br>
+        </div>
+        {% endif %}
+
+    </p>
+    {% endfor %}
+</html>

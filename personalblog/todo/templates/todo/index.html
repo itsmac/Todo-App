@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>TO-DO</title>
+    </head>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type = "submit" title="Submit">
+    </form>
+    <div>
+        {% for item in items%}
+        {{item.title}}
+        <br>
+        {{item.description}}
+        <button title="Edit" onclick="location.href='{% url 'edit' item.id %}'" >Edit</button>
+        <button title="Delete" onclick="location.href='{% url 'remove' item.id %}'">Delete</button>
+        <br>
+        {% endfor %}
+    </div>
+</html>

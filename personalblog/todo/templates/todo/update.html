@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update</title>
+</head>
+
+<body>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="update">
+        <button title="Cancel" onclick="location.href='{% url 'index' %}'" value="Cancel"></button>
+    </form>
+</body>
+
+</html>
